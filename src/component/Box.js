@@ -21,12 +21,14 @@ function Box(){
     }
 
     const handleClick=(position)=>{
+        if(result===null){
         if(cell[position]===null){
         const eachCell=cell.slice();
         eachCell[position]=x?'X':'O';
         setCell(eachCell);
         setX(!x);
-        }
+        }        
+    }
     }
 
     function winner(cell){
